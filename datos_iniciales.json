@@ -1,0 +1,58 @@
+[
+  {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+          "username": "usuario1",
+          "password": "pbkdf2_sha256$870000$pdhycZhc6lxMsi5f9oSTrQ$2s1umT0xu4kpxNkb1Fpwcno3MjBv0q3/zsbVglVpH/M=",
+          "is_superuser": false,
+          "is_staff": false,
+          "is_active": true
+      }
+  },
+  {
+      "model": "auth.user",
+      "pk": 2,
+      "fields": {
+          "username": "usuario2",
+          "password": "pbkdf2_sha256$870000$lq6gZpvqxXOZt9M2LE0E0c$zUfHOIHYKqVHQyJ8Hy4uBO3Rqy4NQjiVNk0qTh0+nfw=",
+          "is_superuser": false,
+          "is_staff": false,
+          "is_active": true
+      }
+  },
+  {
+      "model": "cliente.cliente",
+      "pk": 1,
+      "fields": {
+          "nombre": "Juan",
+          "apellido": "Pérez",
+          "documento": "123456789",
+          "telefono": "3001234567",
+          "email": "juan.perez@example.com",
+          "edad": 30
+      }
+  },
+  {
+      "model": "establecimiento.establecimiento",
+      "pk": 1,
+      "fields": {
+          "nombre": "Restaurante Delicias",
+          "tipo": "Restaurante",
+          "direccion": "Calle 123 #45-67",
+          "ciudad": "Bogotá",
+          "telefono": "6012345678"
+      }
+  },
+  {
+      "model": "reserva.reserva",
+      "pk": 1,
+      "fields": {
+          "fecha": "2024-04-15T18:30:00Z",
+          "descripcion": "Reserva para cena especial",
+          "valor": "150.00",
+          "cliente": 1,
+          "establecimiento": 1
+      }
+  }
+]

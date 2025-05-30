@@ -1,0 +1,695 @@
+{
+	"info": {
+		"_postman_id": "4abdde04-fcb0-4581-8f09-ffeaa491d957",
+		"name": "django-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15084454"
+	},
+	"item": [
+		{
+			"name": "CLIENTE",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2ODk3ODUwLCJpYXQiOjE3NDY4OTQyNTAsImp0aSI6IjcxZjdkZjRlYjkzMjQ2MjliNzdjYTY5YWNhYzY5Y2EwIiwidXNlcl9pZCI6M30.kqAAbvOQYiRYLZy7ahJvKRS1LEzwSmDGiFFjXPOqYz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/cliente/api/v1/cliente/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"cliente",
+								"api",
+								"v1",
+								"cliente",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2ODM3ODE2LCJpYXQiOjE3NDY4MzQyMTYsImp0aSI6IjVlNzJlYjAyNjMxOTQwNWZhMDgxYWQ3MTEzOWZlOThiIiwidXNlcl9pZCI6Mn0.RZIhyfGP40D2lG7exK2nOk2h042oszvs0_4kipgJPH8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Andrea\",\r\n    \"apellido\": \"Yamile\",\r\n    \"documento\": \"678986\",\r\n    \"telefono\": \"3001234567\",\r\n    \"email\": \"yamile.perez@example.com\",\r\n    \"edad\": 26\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/cliente/api/v1/cliente/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"cliente",
+								"api",
+								"v1",
+								"cliente",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Yamile\",\r\n    \"apellido\": \"Yamile\",\r\n    \"documento\": \"678986\",\r\n    \"telefono\": \"3001234567\",\r\n    \"email\": \"yamile.perez@example.com\",\r\n    \"edad\": 26\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/cliente/api/v1/cliente/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"cliente",
+								"api",
+								"v1",
+								"cliente",
+								"2",
+								""
+							]
+						},
+						"description": "Generated from cURL: curl --location 'http://127.0.0.1:8000/cliente/api/v1/cliente/2/' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n    \"nombre\": \"Anyi\",\r\n    \"apellido\": \"Yamile\",\r\n    \"documento\": \"678986\",\r\n    \"telefono\": \"3001234567\",\r\n    \"email\": \"yamile.perez@example.com\",\r\n    \"edad\": 26\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/cliente/api/v1/cliente/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"cliente",
+								"api",
+								"v1",
+								"cliente",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RESERVA",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3MjU2OTYzLCJpYXQiOjE3NDcyNTMzNjMsImp0aSI6ImQ4YzhjNTRhYzVhNTQ3Nzk4MzlkYTE5ZGJjM2JjMTFlIiwidXNlcl9pZCI6MX0.DRvjIVd5BT23KC-6edsG1JyXKKTMjFagBib0myMqVXk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/reserva/api/v1/reserva/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"reserva",
+								"api",
+								"v1",
+								"reserva",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2ODk3ODUwLCJpYXQiOjE3NDY4OTQyNTAsImp0aSI6IjcxZjdkZjRlYjkzMjQ2MjliNzdjYTY5YWNhYzY5Y2EwIiwidXNlcl9pZCI6M30.kqAAbvOQYiRYLZy7ahJvKRS1LEzwSmDGiFFjXPOqYz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"fecha\": \"2024-06-15T22:40:00Z\",\r\n        \"descripcion\": \"Reserva para cena especial con mi madre\",\r\n        \"valor\": \"150.00\",\r\n        \"cliente\": 1,\r\n        \"establecimiento\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/reserva/api/v1/reserva/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"reserva",
+								"api",
+								"v1",
+								"reserva",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"fecha\": \"2024-06-15T18:30:00Z\",\r\n    \"descripcion\": \"Reserva para cena especial\",\r\n    \"valor\": \"2000.00\",\r\n    \"cliente\": 1,\r\n    \"establecimiento\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/reserva/api/v1/reserva/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"reserva",
+								"api",
+								"v1",
+								"reserva",
+								"2",
+								""
+							]
+						},
+						"description": "Generated from cURL: curl --location 'http://127.0.0.1:8000/cliente/api/v1/cliente/2/' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n    \"nombre\": \"Anyi\",\r\n    \"apellido\": \"Yamile\",\r\n    \"documento\": \"678986\",\r\n    \"telefono\": \"3001234567\",\r\n    \"email\": \"yamile.perez@example.com\",\r\n    \"edad\": 26\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/reserva/api/v1/reserva/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"reserva",
+								"api",
+								"v1",
+								"reserva",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ESTABLECIMIENTO",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2ODk3ODUwLCJpYXQiOjE3NDY4OTQyNTAsImp0aSI6IjcxZjdkZjRlYjkzMjQ2MjliNzdjYTY5YWNhYzY5Y2EwIiwidXNlcl9pZCI6M30.kqAAbvOQYiRYLZy7ahJvKRS1LEzwSmDGiFFjXPOqYz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/establecimiento/api/v1/establecimiento/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"establecimiento",
+								"api",
+								"v1",
+								"establecimiento",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2ODk3ODUwLCJpYXQiOjE3NDY4OTQyNTAsImp0aSI6IjcxZjdkZjRlYjkzMjQ2MjliNzdjYTY5YWNhYzY5Y2EwIiwidXNlcl9pZCI6M30.kqAAbvOQYiRYLZy7ahJvKRS1LEzwSmDGiFFjXPOqYz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Restaurante makabro\",\r\n    \"tipo\": \"Restaurante\",\r\n    \"direccion\": \"Calle 123 #45-67\",\r\n    \"ciudad\": \"Bogotá\",\r\n    \"telefono\": \"6012345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/establecimiento/api/v1/establecimiento/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"establecimiento",
+								"api",
+								"v1",
+								"establecimiento",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Restaurante Anyi\",\r\n    \"tipo\": \"Restaurante\",\r\n    \"direccion\": \"Calle 123 #45-67\",\r\n    \"ciudad\": \"Bogotá\",\r\n    \"telefono\": \"6012345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/establecimiento/api/v1/establecimiento/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"establecimiento",
+								"api",
+								"v1",
+								"establecimiento",
+								"2",
+								""
+							]
+						},
+						"description": "Generated from cURL: curl --location 'http://127.0.0.1:8000/cliente/api/v1/cliente/2/' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n    \"nombre\": \"Anyi\",\r\n    \"apellido\": \"Yamile\",\r\n    \"documento\": \"678986\",\r\n    \"telefono\": \"3001234567\",\r\n    \"email\": \"yamile.perez@example.com\",\r\n    \"edad\": 26\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/establecimiento/api/v1/establecimiento/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"establecimiento",
+								"api",
+								"v1",
+								"establecimiento",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USUARIOS",
+			"item": []
+		},
+		{
+			"name": "AUTHENTICATION",
+			"item": [
+				{
+					"name": "REGISTER-ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"sperezp\",\r\n  \"password\": \"N7qcajb8\",\r\n  \"email\": \"santy@gmail.com\",\r\n  \"role\": \"ADMINISTRADOR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/usuario/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"usuario",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER-CLIENTE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"ahoyos\",\r\n  \"password\": \"N7qcajb8\",\r\n  \"email\": \"santy@gmail.com\",\r\n  \"role\": \"CLIENTE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/usuario/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"usuario",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-TOKEN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"sperezp\",\r\n  \"password\": \"N7qcajb8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/usuario/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"usuario",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REFRESH-TOKEN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzQ5OTA1MCwiaWF0IjoxNzQ2ODk0MjUwLCJqdGkiOiJiMTA5ZDAzNDFkZjE0ODMxODVhOTgxOTkzZjNjYWUyZSIsInVzZXJfaWQiOjN9.MzqsAzsRooRkUzx3XSNVvBB60V6R2P6rIeqJ3A3cYRo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/usuario/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"usuario",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REPORTES",
+			"item": [
+				{
+					"name": "EXPORT-PDF",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3MjU3MjIyLCJpYXQiOjE3NDcyNTM2MjIsImp0aSI6IjI1ZTQxMTc4NzU5ZjQzMDQ4NzEyMDQ0YjNjNDI1ZmM4IiwidXNlcl9pZCI6MX0.L9EGmQVZfPoSvAff-p4vu5M0u33kNxWV9oBCZxCvqnE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/reserva/api/v1/reserva/exportar-pdf/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"reserva",
+								"api",
+								"v1",
+								"reserva",
+								"exportar-pdf",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EXPORT-JSON",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3MjU3MjIyLCJpYXQiOjE3NDcyNTM2MjIsImp0aSI6IjI1ZTQxMTc4NzU5ZjQzMDQ4NzEyMDQ0YjNjNDI1ZmM4IiwidXNlcl9pZCI6MX0.L9EGmQVZfPoSvAff-p4vu5M0u33kNxWV9oBCZxCvqnE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/reserva/api/v1/reserva/exportar-json/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"reserva",
+								"api",
+								"v1",
+								"reserva",
+								"exportar-json",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

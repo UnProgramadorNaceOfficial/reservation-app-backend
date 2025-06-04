@@ -14,8 +14,7 @@ coreschema==0.0.4
 cryptography==44.0.3
 cssselect2==0.8.0
 defusedxml==0.7.1
-Django==5.2.1
-whitenoise==6.9.0
+Django==5.1.7
 django-cors-headers==4.7.0
 djangorestframework==3.16.0
 djangorestframework_simplejwt==5.5.0

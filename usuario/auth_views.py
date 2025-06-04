@@ -20,22 +20,21 @@ class CookieTokenObtainPairView(TokenObtainPairView):
                 settings.SIMPLE_JWT['AUTH_COOKIE'],
                 access,
                 max_age=3600,
-                httponly=True,
-                secure=True,
-                samesite='None',
-                path='/'
+                httponly=settings.SIMPLE_JWT['AUTH_COOKIE_HTTP_ONLY'],
+                secure=settings.SIMPLE_JWT['AUTH_COOKIE_SECURE'],
+                samesite=settings.SIMPLE_JWT['AUTH_COOKIE_SAMESITE'],
+                path=settings.SIMPLE_JWT['AUTH_COOKIE_PATH']
             )
 
             response.set_cookie(
                 settings.SIMPLE_JWT['AUTH_COOKIE_REFRESH'],
                 refresh,
                 max_age=7 * 24 * 3600,
-                httponly=True,
-                secure=True,
-                samesite='None',
-                path='/'
+                httponly=settings.SIMPLE_JWT['AUTH_COOKIE_HTTP_ONLY'],
+                secure=settings.SIMPLE_JWT['AUTH_COOKIE_SECURE'],
+                samesite=settings.SIMPLE_JWT['AUTH_COOKIE_SAMESITE'],
+                path=settings.SIMPLE_JWT['AUTH_COOKIE_PATH']
             )
-
 
         return response
 
